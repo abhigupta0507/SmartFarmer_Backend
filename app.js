@@ -10,7 +10,7 @@ const logger = require("./utils/logger");
 // Route imports
 const authRoutes = require("./routes/auth.routes");
 const userRoutes = require("./routes/user.routes");
-const chatRoutes = require("./routes/chatRoutes");
+const chatRoutes = require("./routes/chat.routes");
 const voiceRoutes = require("./routes/voice.routes");
 const weatherRoutes = require("./routes/weather.routes");
 const app = express();
@@ -73,7 +73,7 @@ app.use("/api/voice-chat", voiceRoutes);
 
 // Future routes (placeholder for easy expansion)
 // app.use('/api/pest-detection', pestDetectionRoutes);
-app.use('/api/weather', weatherRoutes);
+app.use("/api/weather", weatherRoutes);
 // app.use('/api/crops', cropRoutes);
 
 // ── Error Handlers ──────────────────────────────────────────────────────────
