@@ -11,6 +11,7 @@ const logger = require("./utils/logger");
 const chatRoutes = require("./routes/chat.routes");
 const voiceRoutes = require("./routes/voice.routes");
 const weatherRoutes = require("./routes/weather.routes");
+const edgeModelRoutes = require("./routes/edgeModel.routes")
 
 const app = express();
 
@@ -74,6 +75,7 @@ app.get("/health", (_req, res) => {
 app.use("/api/chat", chatRoutes);
 app.use("/api/voice-chat", voiceRoutes);
 app.use("/api/weather", weatherRoutes);
+app.use("/api/edge", edgeModelRoutes);
 
 // ── Error handling ────────────────────────────────────────────────────────────
 app.use(notFound);
